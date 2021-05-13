@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    grid-gap: 0px;
+}
+
+#nav-bar {
+    height: 100vh;
+    background-color: #252734;
+    font-family: 'Roboto', sans-serif;
+}
+
+#app-logo {
+    height: 100px;
+    width: 100%;
+    background-color: #2b3040;
+}
+
+#nav-bar ul {
+    list-style: none;
+    font-size: 20px;
+    color: rgb(218, 218, 218);
+    font-weight: 300;
+}
+
+#nav-bar li {
+    margin-top: 15px;
+}
+
+#nav-bar li i {
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.content {
+    background-color: #EDEFF2;
+    padding: 10px;
+    height: 100vh;
+    padding-left: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu ul {
+    list-style-type: none;
+    background-color: EDEFF2;
+}
+
+.menu li {
+    padding: 10px;
+    margin-bottom: 7px;
+    background-color: #ffffff;
+    width: 70%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.menu p {
+    font-size: 15px;
+}
+
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-areas: 'header header header header header header' 'left left left left left left' 'middle middle middle middle middle middle' 'right right right right right right' 'footer footer footer footer footer footer';
+    }
+}

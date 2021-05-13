@@ -1,136 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-  
-}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-
-html {
-  font-family: "Lucida Sans", sans-serif;
-}
-
-.header {
-  background-color: #ddd;
-  text-align: center;
-  color: black;
-  padding: 15px;
-  
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 10px;
-  margin-bottom: 7px;
-  background-color: black;
-  color: #FDFEFE ;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.menu li:hover {
-  background-color: #0099cc;
-}
-.content {
-  background-color: #ddd;
-  padding: 10px;
-  height:500px /* Should be removed. Only for demonstration */
-}
-.aside {
-  background-color: #33b5e5;
-  padding: 15px;
-  color: #ffffff;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'left middle middle middle middle right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-} 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-
-@media (max-width: 600px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
-  }
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="topnav">
-  <a href="#">Home</a>
-</div>
-<div class="middle" style="background-color:#bbb;">  
-<div class="header">
-  <h1>Card Page</h1>
-</div>
-<div class="content">
-<div class="col-3 col-s-3 menu">
-<div class="row">
 
-    <ul>
-      <li>Dijkstra's algorithm 
-      <p>Dijkstra's algorithm (/ˈdaɪkstrəz/ DYKE-strəz) is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later.</p>
-      </li>
-      <li>Greedy algorithm
-      <p>A greedy algorithm is any algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage.</p>
-      </li>
-      <li>CSS
-      <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
-      </li>
-      <li>HTML
-      <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
-      </li>
-    </ul>
-  </div>
-  </div>
-</div>
-</div>  
-  
+<body class="grid-container">
+    <nav id="nav-bar" class="grid-item">
+        <div id="app-logo">
+
+        </div>
+        <ul>
+            <li class="nav-selected"><i class="bi-house-door"></i>Home</li>
+            <li><i class="bi-collection"></i>Gallery</li>
+            <li><i class="bi-gear"></i>Settings</li>
+            <li><i class="bi-people"></i>Team</li>
+        </ul>
+    </nav>
+    <div class="content grid-item">
+        <div class="col-3 col-s-3 menu">
+            <div class="row">
+                <h1>2021-4-3 CSE100 Lecture</h1>
+                <ul>
+                    <li>Dijkstra's algorithm
+                        <p>Dijkstra's algorithm (/ˈdaɪkstrəz/ DYKE-strəz) is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra
+                            in 1956 and published three years later.</p>
+                    </li>
+                    <li>Greedy algorithm
+                        <p>A greedy algorithm is any algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage.</p>
+                    </li>
+                    <li>CSS
+                        <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+                        </p>
+                    </li>
+                    <li>HTML
+                        <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such
+                            as JavaScript.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
 
 
 </body>
+
 </html>
