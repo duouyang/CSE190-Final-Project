@@ -24,22 +24,33 @@
             <li><i class="bi-people"></i>Team</li>
         </ul>
     </nav>
-    <div class="grid-item" id="note-region">
-        <input type="text" placeholder="word" id="note-word">
-        <textarea name="" id="note-definition" cols="30" rows="10"></textarea>
-        <button id="note-button">Add Note</button>
-    </div>
     <main id="main-content" class="grid-item">
-        <content id="text-region">
-            <p>
-                The diencephalonis a division of the forebrain, and is situated between the telencephalon and the midbrain (embryonic mesencephalon). The diencephalon has also been known as the 'tweenbrain in older literature. It consists of structures that are on either
-                side of the third ventricle, including the thalamus, the hypothalamus, the epithalamus and the subthalamus. The diencephalon is one of the main vesicles of the brain formed during embryogenesis. During the third week of development a neural
-                tube is created from the ectoderm, one of the three primary germ layers. The tube forms three main vesicles during the third week of development: the prosencephalon, the mesencephalon and the rhombencephalon. The prosencephalon gradually
-                divides into the telencephalon and the diencephalon.
-            </p>
-        </content>
+        <div id="input-article">
+            <h1 id="input-article-heading">Input your note here</h1>
+            <textarea name="" id="input-article-text" cols="100" rows="30"></textarea>
+            <br>
+            <button id="input-article-region-button">Submit</button>
+        </div>
     </main>
 </body>
-<script src="index.js"></script>
+<script>
+    function handleSubmit (e){
+        inputText = document.getElementById('input-article-text').value
+        console.log(inputText)
+        fetch('http://167.172.228.61:5000/api/annotate', {
+            method: 'post',
+            body: JSON.stringify({"passage" : inputText}),
+        }).then(response => {
+            return response.text()
+        })
+        .then((data) => {
+            localStorage.setItem('190-passage', data);
+            window.location.replace("passage.html");
+        });
+    }
+
+    document.getElementById("input-article-region-button").addEventListener('click', handleSubmit);
+
+</script>
 
 </html>
